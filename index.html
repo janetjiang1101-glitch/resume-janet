@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蒋晖 | 个人简历</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ========== CSS Variables ========== */
+:root {
+  --navy-900: #0a1628;
+  --navy-800: #0f2140;
+  --navy-700: #162d56;
+  --navy-600: #1e3a6e;
+  --navy-500: #2a4f94;
+  --navy-400: #3b6ab5;
+  --navy-300: #5a8fd4;
+  --navy-200: #8bb4e8;
+  --navy-100: #c5daf4;
+  --navy-50: #eaf2fc;
+  --white: #ffffff;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --accent-gold: #f0b429;
+  --accent-teal: #0ea5e9;
+  --accent-emerald: #10b981;
+  --accent-rose: #f43f5e;
+  --accent-violet: #8b5cf6;
+  --shadow-sm: 0 1px 2px rgba(10,22,40,0.05);
+  --shadow-md: 0 4px 12px rgba(10,22,40,0.08);
+  --shadow-lg: 0 12px 32px rgba(10,22,40,0.12);
+  --shadow-xl: 0 20px 50px rgba(10,22,40,0.18);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+/* ========== Reset & Base ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--gray-700);
+  background: var(--gray-50);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== Page Container ========== */
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 50%, var(--navy-500) 100%);
+  border-radius: var(--radius-xl);
+  padding: 56px 48px 48px;
+  color: var(--white);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(59,106,181,0.25) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(14,165,233,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.hero-text { flex: 1; }
+
+.hero-name {
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  background: linear-gradient(135deg, #fff 30%, var(--navy-200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-title {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--navy-200);
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: var(--navy-100);
+  max-width: 540px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--navy-100);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.hero-tag:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.3);
+  transform: translateY(-1px);
+}
+
+.hero-tag .tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hero-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 220px;
+  padding: 20px 24px;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--navy-100);
+}
+
+.contact-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* ========== Data Cards Section ========== */
+.data-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.data-card {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.data-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--navy-200);
+}
+
+.data-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.data-card:nth-child(1)::before { background: linear-gradient(90deg, var(--navy-600), var(--navy-400)); }
+.data-card:nth-child(2)::before { background: linear-gradient(90deg, var(--accent-teal), #38bdf8); }
+.data-card:nth-child(3)::before { background: linear-gradient(90deg, var(--accent-emerald), #34d399); }
+.data-card:nth-child(4)::before { background: linear-gradient(90deg, var(--accent-gold), #fbbf24); }
+
+.data-card-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.data-card:nth-child(1) .data-card-number { color: var(--navy-600); }
+.data-card:nth-child(2) .data-card-number { color: var(--accent-teal); }
+.data-card:nth-child(3) .data-card-number { color: var(--accent-emerald); }
+.data-card:nth-child(4) .data-card-number { color: var(--accent-gold); }
+
+.data-card-unit {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: inherit;
+  margin-left: 2px;
+}
+
+.data-card-label {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.data-card-desc {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* ========== Section Common ========== */
+.section {
+  margin-bottom: 32px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.section-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--navy-700), var(--navy-500));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.section-icon svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy-800);
+  letter-spacing: -0.01em;
+}
+
+.section-subtitle {
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  font-weight: 400;
+}
+
+/* ========== Work Timeline ========== */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--navy-300), var(--navy-100));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 28px 28px 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--navy-100);
+}
+
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: -29px;
+  top: 32px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--navy-500);
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--navy-500);
+  box-shadow: 0 0 0 4px rgba(42,79,148,0.15);
+}
+
+.timeline-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.timeline-period {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--navy-400);
+  background: var(--navy-50);
+  padding: 3px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.timeline-company {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+
+.timeline-role {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  font-weight: 400;
+}
+
+.timeline-company-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.timeline-bullets {
+  list-style: none;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeline-bullets li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+.timeline-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--navy-300);
+}
+
+.timeline-bullets li strong {
+  color: var(--navy-700);
+  font-weight: 600;
+}
+
+/* ========== Skills + Education Row ========== */
+.skills-education-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.card-panel {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+}
+
+/* ========== Radar Chart ========== */
+.radar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0 0;
+}
+
+.radar-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== Skill Bars ========== */
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.skill-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-bar-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy-800);
+}
+
+.skill-bar-level {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  font-weight: 500;
+}
+
+.skill-bar-track {
+  height: 8px;
+  background: var(--gray-100);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0;
+}
+
+.skill-bar-fill.animate { /* JS will set width */ }
+
+/* ========== Education ========== */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edu-item {
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  transition: all 0.2s ease;
+}
+
+.edu-item:hover {
+  background: var(--navy-50);
+  border-color: var(--navy-100);
+}
+
+.edu-period {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--navy-400);
+  margin-bottom: 4px;
+}
+
+.edu-school {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy-800);
+  margin-bottom: 2px;
+}
+
+.edu-major {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+.edu-badge {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--navy-50);
+  color: var(--navy-500);
+  border: 1px solid var(--navy-100);
+}
+
+/* ========== Language Tags ========== */
+.language-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-100);
+}
+
+.language-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.lang-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  color: var(--gray-600);
+  transition: all 0.2s ease;
+}
+
+.lang-tag:hover {
+  border-color: var(--navy-200);
+  background: var(--navy-50);
+  color: var(--navy-700);
+}
+
+.lang-tag .lang-level {
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 100px;
+  background: var(--navy-50);
+  color: var(--navy-400);
+  font-weight: 600;
+}
+
+/* ========== Footer ========== */
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.78rem;
+  color: var(--gray-400);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .page-container { padding: 12px 8px 40px; }
+
+  .hero {
+    padding: 36px 24px 32px;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-name { font-size: 2rem; }
+
+  .hero-contact {
+    min-width: unset;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    padding: 16px;
+  }
+
+  .data-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .data-card { padding: 18px 16px; }
+  .data-card-number { font-size: 1.8rem; }
+
+  .skills-education-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .timeline-item { padding: 20px 18px 18px; }
+
+  .timeline-meta { flex-direction: column; gap: 4px; }
+}
+
+@media (max-width: 480px) {
+  .hero-name { font-size: 1.6rem; }
+  .hero-tagline { font-size: 0.88rem; }
+
+  .data-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .hero-tags { gap: 6px; }
+  .hero-tag { padding: 5px 12px; font-size: 0.76rem; }
+}
+
+/* ========== Animations ========== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<div class="page-container">
+
+  <!-- ========== Hero ========== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-name">蒋晖 Janet</h1>
+        <p class="hero-title">商务拓展 / 产品GTM · 6年出海经验 · MBA在读</p>
+        <p class="hero-tagline">
+          中山大学MBA在读（全英文授课，绩点前5%），6年出海实战经验（TCL子公司奥马/海尔），覆盖日本市场商务拓展与产品GTM全链路。2023年个人操盘5200万美金营收，擅长市场洞察、客户开发、跨文化谈判及产品上市策略制定。中日英三语商务沟通无障碍。
+        </p>
+        <div class="hero-tags">
+          <span class="hero-tag"><span class="tag-dot" style="background:var(--accent-teal)"></span>日语 N1</span>
+          <span class="hero-tag"><span class="tag-dot" style="background:var(--accent-emerald)"></span>英语 CET-6</span>
+          <span class="hero-tag"><span class="tag-dot" style="background:var(--accent-violet)"></span>MBA全英文授课</span>
+          <span class="hero-tag"><span class="tag-dot" style="background:var(--accent-gold)"></span>商务拓展BD</span>
+          <span class="hero-tag"><span class="tag-dot" style="background:var(--accent-rose)"></span>产品GTM</span>
+        </div>
+      </div>
+      <div class="hero-contact">
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          192-6787-6616
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          541882988@qq.com
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          广州 / 深圳
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          求职类型：实习 · 随时到岗
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Data Cards ========== -->
+  <div class="data-cards">
+    <div class="data-card animate-in delay-1">
+      <div class="data-card-number">5200<span class="data-card-unit">万美金</span></div>
+      <div class="data-card-label">年度营收操盘</div>
+      <div class="data-card-desc">日本市场KA客户，单人业绩国际营销中心 TOP2</div>
+    </div>
+    <div class="data-card animate-in delay-2">
+      <div class="data-card-number">40<span class="data-card-unit">万台</span></div>
+      <div class="data-card-label">年出货量</div>
+      <div class="data-card-desc">2023年度日本市场，对接SHARP、HAIER JAPAN等头部渠道</div>
+    </div>
+    <div class="data-card animate-in delay-3">
+      <div class="data-card-number">10<span class="data-card-unit">+</span></div>
+      <div class="data-card-label">新品上市/年</div>
+      <div class="data-card-desc">年均推动10+SKU上市，同步管理多项目开发周期</div>
+    </div>
+    <div class="data-card animate-in delay-4">
+      <div class="data-card-number">100<span class="data-card-unit">+</span></div>
+      <div class="data-card-label">品类市场调研</div>
+      <div class="data-card-desc">覆盖个护、小家电等品类，按周输出竞品与趋势报告</div>
+    </div>
+  </div>
+
+  <!-- ========== Work Timeline ========== -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+      </div>
+      <div>
+        <h2 class="section-title">工作经历</h2>
+        <span class="section-subtitle">Work Experience</span>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <!-- Job 1 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-period">2019.04 – 2024.04</span>
+          <div class="timeline-company-group">
+            <span class="timeline-company">广东奥马冰箱有限公司（TCL子公司）</span>
+            <span class="timeline-role">高级商务经理 · 日本市场</span>
+          </div>
+        </div>
+        <ul class="timeline-bullets">
+          <li><strong>商务拓展与客户经营：</strong>负责日本市场KA客户开发与商务谈判，2023年实现年出货40万台、营收5200万美金，单人业绩位列国际营销中心TOP2</li>
+          <li><strong>渠道开拓与合作伙伴管理：</strong>通过广交会等核心渠道独立开发AQUA等优质客户，建立并维护日本市场客户矩阵，推动合作伙伴关系持续深化</li>
+          <li><strong>产品GTM与项目管理：</strong>承接客户需求，年均推动10+新品SKU从需求导入到上市交付，同步协调10+项目开发周期，打通产品、供应链与客户端全链路</li>
+          <li><strong>市场洞察与策略制定：</strong>系统调研日本市场规模、渠道格局与竞品动态，输出市场分析报告并制定进入策略，为商务决策提供数据支撑</li>
+        </ul>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-period">2018.02 – 2019.03</span>
+          <div class="timeline-company-group">
+            <span class="timeline-company">广州海尔信息科技有限公司</span>
+            <span class="timeline-role">产品选品与市场经理 · 跨境电商</span>
+          </div>
+        </div>
+        <ul class="timeline-bullets">
+          <li><strong>市场调研与GTM机会识别：</strong>开展亚马逊平台区域市场调研（美国/欧洲/日本），撰写产品开发方案及竞品分析报告，识别潜在市场进入机会</li>
+          <li><strong>供应商开发与产品矩阵搭建：</strong>收集全球供应商产品目录，跟踪小家电品类趋势，筛选符合品牌质量标准的产品组合，构建品类矩阵</li>
+          <li><strong>产品评估与数据分析：</strong>执行候选产品测评，按周输出1个品类新品评估报告，累计覆盖电动牙刷、水牙线等100+美妆个护品类</li>
+          <li><strong>跨部门协调与需求落地：</strong>跟进产品上线及销售数据，提炼核心卖点；定期拜访供应商及客户，结合市场需求制定产品开发计划</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Skills + Education ========== -->
+  <div class="skills-education-row">
+    <!-- Skills Panel -->
+    <div class="card-panel">
+      <div class="section-header" style="margin-bottom:16px">
+        <div class="section-icon" style="width:32px;height:32px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div>
+          <h2 class="section-title" style="font-size:1.15rem">核心能力</h2>
+          <span class="section-subtitle">Core Competencies</span>
+        </div>
+      </div>
+
+      <!-- Radar Chart -->
+      <div class="radar-container">
+        <svg viewBox="0 0 400 360" width="400" height="360" id="radarChart">
+          <!-- Background pentagons -->
+          <g opacity="0.08">
+            <polygon points="200,40 340,142 287,307 113,307 60,142" fill="var(--navy-700)" />
+          </g>
+          <g opacity="0.06">
+            <polygon points="200,76 312,157 270,290 130,290 88,157" fill="var(--navy-700)" />
+          </g>
+          <g opacity="0.04">
+            <polygon points="200,112 284,172 253,272 147,272 116,172" fill="var(--navy-700)" />
+          </g>
+          <g opacity="0.03">
+            <polygon points="200,148 256,187 235,255 165,255 144,187" fill="var(--navy-700)" />
+          </g>
+
+          <!-- Axis lines -->
+          <line x1="200" y1="40" x2="200" y2="307" stroke="var(--gray-200)" stroke-width="0.5"/>
+          <line x1="60" y1="142" x2="340" y2="142" stroke="var(--gray-200)" stroke-width="0.5"/>
+          <line x1="113" y1="307" x2="287" y2="307" stroke="var(--gray-200)" stroke-width="0.5"/>
+
+          <!-- Data polygon -->
+          <polygon points="200,52 332,148 278,300 125,290 72,148"
+            fill="rgba(42,79,148,0.12)" stroke="var(--navy-500)" stroke-width="2.5" stroke-linejoin="round"/>
+
+          <!-- Data points -->
+          <circle cx="200" cy="52" r="5" fill="var(--navy-600)" stroke="white" stroke-width="2"/>
+          <circle cx="332" cy="148" r="5" fill="var(--navy-600)" stroke="white" stroke-width="2"/>
+          <circle cx="278" cy="300" r="5" fill="var(--navy-600)" stroke="white" stroke-width="2"/>
+          <circle cx="125" cy="290" r="5" fill="var(--navy-600)" stroke="white" stroke-width="2"/>
+          <circle cx="72" cy="148" r="5" fill="var(--navy-600)" stroke="white" stroke-width="2"/>
+
+          <!-- Labels -->
+          <text x="200" y="28" text-anchor="middle" fill="var(--navy-700)" font-size="13" font-weight="600">商务拓展BD</text>
+          <text x="358" y="146" text-anchor="start" fill="var(--navy-700)" font-size="13" font-weight="600">市场洞察</text>
+          <text x="292" y="325" text-anchor="middle" fill="var(--navy-700)" font-size="13" font-weight="600">跨文化沟通</text>
+          <text x="108" y="325" text-anchor="middle" fill="var(--navy-700)" font-size="13" font-weight="600">产品GTM</text>
+          <text x="42" y="146" text-anchor="end" fill="var(--navy-700)" font-size="13" font-weight="600">项目管理</text>
+
+          <!-- Score labels -->
+          <text x="200" y="66" text-anchor="middle" fill="var(--navy-400)" font-size="10" font-weight="500">95%</text>
+          <text x="320" y="155" text-anchor="end" fill="var(--navy-400)" font-size="10" font-weight="500">90%</text>
+          <text x="278" y="315" text-anchor="middle" fill="var(--navy-400)" font-size="10" font-weight="500">88%</text>
+          <text x="125" y="305" text-anchor="middle" fill="var(--navy-400)" font-size="10" font-weight="500">85%</text>
+          <text x="82" y="155" text-anchor="start" fill="var(--navy-400)" font-size="10" font-weight="500">92%</text>
+        </svg>
+      </div>
+
+      <!-- Skill Bars -->
+      <div class="skill-bars">
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">市场调研与竞品分析</span>
+            <span class="skill-bar-level">85%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="85%" style="background: linear-gradient(90deg, var(--navy-500), var(--navy-400))"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">产品上市策略(GTM)</span>
+            <span class="skill-bar-level">80%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="80%" style="background: linear-gradient(90deg, var(--accent-teal), #38bdf8)"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">供应链与交付管理</span>
+            <span class="skill-bar-level">78%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="78%" style="background: linear-gradient(90deg, var(--accent-emerald), #34d399)"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">数据驱动决策</span>
+            <span class="skill-bar-level">82%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="82%" style="background: linear-gradient(90deg, var(--accent-gold), #fbbf24)"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="language-section">
+        <div style="font-size:0.88rem;font-weight:600;color:var(--navy-800);margin-bottom:2px">语言能力</div>
+        <div class="language-tags">
+          <span class="lang-tag">🇨🇳 中文 <span class="lang-level">母语</span></span>
+          <span class="lang-tag">🇯🇵 日语 <span class="lang-level">N1</span></span>
+          <span class="lang-tag">🇬🇧 英语 <span class="lang-level">CET-6</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education Panel -->
+    <div class="card-panel">
+      <div class="section-header" style="margin-bottom:16px">
+        <div class="section-icon" style="width:32px;height:32px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div>
+          <h2 class="section-title" style="font-size:1.15rem">教育背景</h2>
+          <span class="section-subtitle">Education</span>
+        </div>
+      </div>
+
+      <div class="education-list">
+        <div class="edu-item">
+          <div class="edu-period">2025.09 – 2027.06</div>
+          <div class="edu-school">中山大学</div>
+          <div class="edu-major">国际工商管理 · 硕士</div>
+          <span class="edu-badge">全英文授课</span>
+          <span class="edu-badge">绩点前5%</span>
+        </div>
+        <div class="edu-item">
+          <div class="edu-period">2014.09 – 2018.06</div>
+          <div class="edu-school">中南民族大学</div>
+          <div class="edu-major">日语 · 本科</div>
+          <span class="edu-badge">JLPT N1</span>
+        </div>
+      </div>
+
+      <!-- Job-fit Highlight -->
+      <div style="margin-top:24px;padding:20px;background:linear-gradient(135deg,var(--navy-50),#f0f7ff);border-radius:var(--radius-sm);border:1px solid var(--navy-100)">
+        <div style="font-size:0.88rem;font-weight:700;color:var(--navy-700);margin-bottom:8px">💡 岗位匹配亮点</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:0.82rem;color:var(--gray-600);line-height:1.6">
+          <li style="padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent-teal)">✓</span>6年出海经验，覆盖商务拓展、客户经营与GTM全链路</li>
+          <li style="padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent-teal)">✓</span>独立操盘日本市场KA客户，5200万美金营收验证BD能力</li>
+          <li style="padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent-teal)">✓</span>熟悉从市场洞察、选品到上市策略的全流程产品GTM</li>
+          <li style="padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent-teal)">✓</span>中日英三语商务沟通，跨文化合作伙伴管理经验丰富</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== Footer ========== -->
+  <div class="footer">
+    <p>© 2026 蒋晖 Janet · Resume Page</p>
+  </div>
+
+</div>
+
+<script>
+// Animate skill bars on scroll
+document.addEventListener('DOMContentLoaded', function() {
+  const fills = document.querySelectorAll('.skill-bar-fill');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const fill = entry.target;
+        const width = fill.getAttribute('data-width');
+        setTimeout(() => {
+          fill.style.width = width;
+        }, 200);
+        observer.unobserve(fill);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  fills.forEach(fill => observer.observe(fill));
+
+  // Animate data cards
+  const cards = document.querySelectorAll('.data-card');
+  cards.forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    setTimeout(() => {
+      card.style.transition = 'all 0.6s ease';
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, 150 * i);
+  });
+
+  // Animate timeline items
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  const timelineObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.transition = 'all 0.6s ease';
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateX(0)';
+        timelineObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  timelineItems.forEach((item, i) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateX(-20px)';
+    timelineObserver.observe(item);
+  });
+});
+</script>
+
+</body>
+</html>
